@@ -1,1 +1,5 @@
-API_TOKEN = '1234567890:ZXCVxcvbnASDFGsdfghjASDFertyu'
+from environs import Env
+
+env = Env()
+env.read_env()
+API_TOKEN = env("TOKEN")
