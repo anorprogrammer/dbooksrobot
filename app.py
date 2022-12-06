@@ -47,7 +47,6 @@ async def choosing_interests(query: types.CallbackQuery):
         try:
             response = await session.get(url='https://www.dbooks.org/api/book/' + book_id)
             data = await response.json()
-            print(data)
             status = data['status']
             if status == "ok":
                 book_title = data['title']
